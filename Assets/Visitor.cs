@@ -1,70 +1,131 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Collections.Generic;
 
 public class Visitor : MonoBehaviour
 {
-    public string VisitorID;
-    [SerializeReference]
-    public List<GameEvent> events = new List<GameEvent>();
-
-
-
-    public NavMeshAgent agent;
+    public AbstractVisitor visitorData;
+    public VisitorSpawner visitorSpawner;
     public NavPoints points;
+    public int speedDivider;
+    public string CurrentDestination;
 
-    private float timer;
-    private float currentTime;
-    private bool isExiting;
+    public float baseSpeed = 3.5f;
+    public float baseAcceleration = 8f;
+    public float baseAngularSpeed = 120f;
+    public float baseStoppingDistance = 0.5f;
+
+
+    private NavMeshAgent navAgent;
+    private MeshRenderer meshRenderer;
+    private Collider collider;
 
     void Start()
     {
-        /**/
-        agent = gameObject.GetComponent<NavMeshAgent>();
-        timer = 1; //Random.value(1, 10);
-        /**/
+        navAgent = GetComponent<NavMeshAgent>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        collider = GetComponent<Collider>();
+        visitorData.events.RemoveAt(0);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /**/
-        currentTime += Time.deltaTime;
-        if (currentTime > timer)
+        // Current speed from eventSettings
+        float currentSpeed = visitorSpawner.eventSettings.speed;
+
+        // Scaling factor based on current speed
+        float speedScale = currentSpeed / baseSpeed;
+
+        // Apply scaled settings
+        navAgent.speed = currentSpeed;
+        navAgent.acceleration = baseAcceleration * speedScale;
+        navAgent.angularSpeed = baseAngularSpeed * speedScale;
+        navAgent.stoppingDistance = baseStoppingDistance * Mathf.Clamp(speedScale, 0.5f, 2f);
+
+        if (visitorData.events.Count == 0)
         {
-            currentTime = 0;
-            int destination = Random.Range(1, 11);
-            if (isExiting)
+            navAgent.SetDestination(points.Entrance.transform.position);
+            return;
+        }
+
+        var nextEvent = visitorData.events[0];
+        DateTime eventTime = DateTime.ParseExact(nextEvent.timestamp, "yyyyMMddHHmmss", null);
+        DateTime currentSimTime = visitorSpawner.currentTime;
+
+        var timeUntilEvent = (eventTime - currentSimTime).TotalMinutes;
+
+        if (timeUntilEvent < 0)
+        {
+            visitorData.events.RemoveAt(0);
+            Wander();
+        }
+        else if (timeUntilEvent <= 5)
+        {
+            if (nextEvent is CheckInOutEvent checkEvent)
             {
-                Object.Destroy(gameObject);
-                return;
+                if (checkEvent.action == CheckAction.CheckIn)
+                {
+                    EnableVisitor();
+                    navAgent.SetDestination(points.Entrance.transform.position);
+                }
+                else if (checkEvent.action == CheckAction.CheckOut)
+                {
+                    navAgent.SetDestination(points.Entrance.transform.position);
+                }
+                CurrentDestination = "Enter/Exit";
             }
-            if (destination < 7)
+            else if (nextEvent is TransactionEvent transactionEvent)
             {
-                agent.SetDestination(GetRandomPosition(points.PodiumArea.transform.position, points.podiumRadius));
-                timer = Random.Range(5, 15);
-                print("Podium");
-            }
-            else if (destination > 7 && destination < 10)
-            {
-                agent.SetDestination(points.Bar.transform.position);
-                timer = Random.Range(5, 10);
-                print("Bar");
-            }
-            else if(destination == 10)
-            {
-                agent.SetDestination(points.Exit.transform.position);
-                timer = 20;
-                isExiting = true;
-                print("Exit");
+                MoveToMerchant(transactionEvent.merchantName);
+                CurrentDestination = transactionEvent.merchantName ;
             }
         }
-        /**/
-    }
-    Vector3 GetRandomPosition(Vector3 origin, float range)
-    {
-        Vector3 randomOffset = Random.insideUnitSphere * range;
-        return origin + new Vector3(randomOffset.x, 0, randomOffset.z); // Keeps Y constant
+
+        else
+        {
+            Wander(); 
+            CurrentDestination = "Wander";
+        }
     }
 
+    void Wander()
+    {
+        if (!navAgent.hasPath || navAgent.remainingDistance < 0.5f)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, points.WanderPoints.Count);
+            navAgent.SetDestination(points.WanderPoints[randomIndex].position);
+        }
+    }
+
+    void MoveToMerchant(string merchantName)
+    {
+        foreach (var merchant in points.Merchants)
+        {
+            if (merchant.Name == merchantName)
+            {
+                navAgent.SetDestination(merchant.location.transform.position);
+                return;
+            }
+        }
+    }
+
+    void EnableVisitor()
+    {
+        meshRenderer.enabled = true;
+        collider.enabled = true;
+    }
+
+    public void DisableVisitor()
+    {
+        meshRenderer.enabled = false;
+        collider.enabled = false;
+    }
+
+
+
+    void OnDestroy()
+    {
+        // Clean-up if necessary
+    }
 }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6339948062055394430}
   m_Layer: 6
   m_Name: Visitor
-  m_TagString: Untagged
+  m_TagString: Visitor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,5 +144,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d6c891979f9b541a75e07311aa0648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  visitorData:
+    userId: 
+    events: []
+  visitorSpawner: {fileID: 0}
   points: {fileID: 0}
+  speedDivider: 1
+  CurrentDestination: 
+  baseSpeed: 10
+  baseAcceleration: 8
+  baseAngularSpeed: 120
+  baseStoppingDistance: 0
+  references:
+    version: 2
+    RefIds: []

@@ -15,10 +15,10 @@ public class DataLoader : MonoBehaviour
 
     void Start()
     {
-        LoadAndOrganizeEvents();
+        
     }
 
-    void LoadAndOrganizeEvents()
+    public void LoadAndOrganizeEvents()
     {
         var visitorDict = new Dictionary<string, AbstractVisitor>();
 
