@@ -1,0 +1,569 @@
+{
+    "events": [
+        {
+            "userId": "66fe86d35c23fdb4223e1e72",
+            "event": "arrive",
+            "timestamp": 1740490241388.0
+        },
+        {
+            "userId": "66fe86d35c23fdb4223e1e72",
+            "event": "leave",
+            "timestamp": 1740490461193.0
+        },
+        {
+            "userId": "66fe86d35c23fdb4223e1e72",
+            "event": "arrive",
+            "timestamp": 1740490870486.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564372199.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564385341.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564389513.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564393528.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564397875.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564405547.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564409521.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564536652.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564545012.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564549637.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564555302.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564562367.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564569305.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564575962.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740564580274.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565728379.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565732606.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565742608.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565748963.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565755322.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565761947.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565766091.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565827309.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565827596.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565828230.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565828562.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565828949.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565829233.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565829619.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565829905.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565830354.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565830669.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565832683.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565832918.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565833314.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565833739.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565834051.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565834276.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565834760.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565835008.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565835332.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565835689.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565836011.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565836323.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565836614.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565837020.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565837390.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565837668.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565837956.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565838413.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565838663.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565839042.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565839350.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565839770.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565840059.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565840367.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565840752.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565841084.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565841422.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565841715.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565842243.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565995266.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740565998601.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566001864.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566127193.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566130245.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566133246.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566139717.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566142982.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566146261.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566149613.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "event": "arrive",
+            "timestamp": 1740566165437.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "event": "arrive",
+            "timestamp": 1740566190480.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566223277.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566227488.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566328543.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566332853.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566336866.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566534625.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566540582.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566546626.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566552645.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566558589.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566597745.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566598150.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566598406.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566598749.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566599095.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566599518.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566599921.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566600109.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566600352.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566600723.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566601163.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566601417.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566601846.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566602084.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566610429.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566614441.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566618507.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566860457.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566864744.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566868815.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566873104.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740566877459.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740567020153.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740567229390.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740567233720.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740567238073.0
+        },
+        {
+            "userId": "679f65b29289f3ca03f9dc74",
+            "event": "arrive",
+            "timestamp": 1740567242451.0
+        }
+    ]
+}

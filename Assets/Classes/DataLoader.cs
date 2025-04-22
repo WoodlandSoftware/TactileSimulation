@@ -13,9 +13,15 @@ public class DataLoader : MonoBehaviour
 {
     [SerializeReference] public List<AbstractVisitor> visitors = new();
 
+    public string ArriveExitFileName;
+    public string TransactionsFileName;
+
     void Start()
     {
-        
+        string transactionsFilePath = Path.Combine(Application.streamingAssetsPath, TransactionsFileName + ".json");
+        string merchantNamesOutputPath = Path.Combine(Application.streamingAssetsPath, "merchant-names.txt");
+
+        WriteMerchantNamesToFile(transactionsFilePath, merchantNamesOutputPath);
     }
 
     public void LoadAndOrganizeEvents()
@@ -23,7 +29,7 @@ public class DataLoader : MonoBehaviour
         var visitorDict = new Dictionary<string, AbstractVisitor>();
 
         // Load transactions
-        string transactionsJson = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "transactions.json"));
+        string transactionsJson = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, TransactionsFileName+ ".json"));
         var transactionWrapper = JsonUtility.FromJson<TransactionWrapper>(transactionsJson);
         foreach (var transaction in transactionWrapper.transactions)
         {
@@ -32,7 +38,7 @@ public class DataLoader : MonoBehaviour
         }
 
         // Load check-in/check-out events
-        string checkInOutJson = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "check-in-checkout.json"));
+        string checkInOutJson = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, ArriveExitFileName+ ".json"));
         var checkWrapper = JsonUtility.FromJson<CheckInOutWrapper>(checkInOutJson);
 
         foreach (var cio in checkWrapper.events)
@@ -41,7 +47,7 @@ public class DataLoader : MonoBehaviour
             {
                 userId = cio.userId,
                 timestamp = UnixTimeToString(cio.timestamp),
-                action = cio.@event == "enter" ? CheckAction.CheckIn : CheckAction.CheckOut
+                action = cio.@event == "arrive" ? CheckAction.CheckIn : CheckAction.CheckOut
             };
 
             AddEventToVisitor(cio.userId, cioEvent, visitorDict);
@@ -67,5 +73,21 @@ public class DataLoader : MonoBehaviour
         DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds((long)unixMillis);
         return dateTimeOffset.ToString("yyyyMMddHHmmss");
     }
-    private Dictionary<string, AbstractVisitor> visitorDict = new();
+
+    public void WriteMerchantNamesToFile(string transactionsFilePath, string outputTxtFilePath)
+    {
+        string transactionsJson = File.ReadAllText(transactionsFilePath);
+        var transactionData = JsonUtility.FromJson<TransactionWrapper>(transactionsJson);
+
+        var merchantNames = transactionData.transactions
+            .Select(t => t.merchantName)
+            .Distinct()
+            .OrderBy(name => name)
+            .ToList();
+
+        File.WriteAllLines(outputTxtFilePath, merchantNames);
+        Debug.Log($"Merchant names written to {outputTxtFilePath}");
+    }
+
+    // private Dictionary<string, AbstractVisitor> visitorDict = new();
 }

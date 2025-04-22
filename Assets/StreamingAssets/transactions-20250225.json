@@ -1,0 +1,82 @@
+{
+    "transactions": [
+        {
+            "userId": "66fe85c47e687ffecddcdf6d",
+            "merchantName": "Main Bar",
+            "NumberOfProducts": 0,
+            "timestamp": 1740491491485.0
+        },
+        {
+            "userId": "66fe85c47e687ffecddcdf6d",
+            "merchantName": "Main Bar",
+            "NumberOfProducts": 0,
+            "timestamp": 1740491670611.0
+        },
+        {
+            "userId": "66fe86d35c23fdb4223e1e72",
+            "merchantName": "Recon Bar",
+            "NumberOfProducts": 0,
+            "timestamp": 1740502369129.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 1,
+            "timestamp": 1740503524867.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 1,
+            "timestamp": 1740503611302.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 0,
+            "timestamp": 1740503981707.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 2,
+            "timestamp": 1740504009969.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 2,
+            "timestamp": 1740504055731.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 3,
+            "timestamp": 1740504109175.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 2,
+            "timestamp": 1740504265566.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 2,
+            "timestamp": 1740504294870.0
+        },
+        {
+            "userId": "67a5c2fc357a1291c5bc6132",
+            "merchantName": "Alpha Deck Bar",
+            "NumberOfProducts": 3,
+            "timestamp": 1740504384567.0
+        },
+        {
+            "userId": "679f66e8c5ef3324278b2fe9",
+            "merchantName": "Recon Bar",
+            "NumberOfProducts": 1,
+            "timestamp": 1740561822496.0
+        }
+    ]
+}

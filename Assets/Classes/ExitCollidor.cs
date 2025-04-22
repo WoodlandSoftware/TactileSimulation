@@ -7,11 +7,17 @@ public class ExitCollidor : MonoBehaviour
         if (other.gameObject.tag == "Visitor")
         {
             Visitor v = other.GetComponent<Visitor>();
-            if (v.visitorData.events.Count == 0) { Destroy(other.gameObject); return; }
+            if (v.visitorData.events.Count == 0) 
+            {
+                v.visitorSpawner.CurrentVisitors.Remove(v.gameObject);
+                Destroy(other.gameObject); 
+                return; 
+            }
             if (v.visitorData.events[0] is CheckInOutEvent checkEvent)
             {
                 if (checkEvent.action == CheckAction.CheckIn)
                 {
+                    v.visitorSpawner.CurrentVisitors.Add(v.gameObject);
                     return;
                 }
                 else if (checkEvent.action == CheckAction.CheckOut)

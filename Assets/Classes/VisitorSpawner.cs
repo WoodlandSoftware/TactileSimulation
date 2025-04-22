@@ -16,8 +16,10 @@ public class VisitorSpawner : MonoBehaviour
     public DateTime currentTime;
     private DateTime endTime;
     public TMP_Text DataTimeHUD;
+    public TMP_Text VisitorsHUD;
     [SerializeReference]
     public List<AbstractVisitor> pendingVisitors = new();
+    public List<GameObject> CurrentVisitors = new();
 
     void Start()
     {
@@ -40,13 +42,22 @@ public class VisitorSpawner : MonoBehaviour
                 SpawnVisitor(pendingVisitors[0]);
                 pendingVisitors.RemoveAt(0);
             }
-
-            currentTime = currentTime.AddSeconds(Time.deltaTime * eventSettings.speed);
+            currentTime = currentTime.AddSeconds(Time.deltaTime * EventSettings.speed);
             //debug.Log(currentTime);
             DataTimeHUD.text = "DateTime: " + currentTime;
+            VisitorsHUD.text = "Current Visitors: " + CurrentVisitors.Count;
+
             yield return null;
         }
     }
+
+    /**
+    public void AddBackVisitorToPending(AbstractVisitor visitorData)
+    {
+        pendingVisitors.Add(visitorData);
+        pendingVisitors.Sort((a, b) => a.events[0].timestamp.CompareTo(b.events[0].timestamp));
+    }
+    /**/
 
     void SpawnVisitor(AbstractVisitor visitorData)
     {
@@ -55,6 +66,7 @@ public class VisitorSpawner : MonoBehaviour
         visitorScript.visitorData = visitorData;
         visitorScript.points = points;
         visitorScript.visitorSpawner = this;
+        CurrentVisitors.Add(visitorInstance);
         //Debug.Log($"Spawned visitor {visitorData.userId} at {currentTime}");
     }
 
