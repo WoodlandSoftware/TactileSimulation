@@ -23,33 +23,16 @@ public class VisitorSpawner : MonoBehaviour
 
     void Start()
     {
-        currentTime = DateTime.ParseExact(eventSettings.EventStartDateTime, "yyyyMMddHHmmss", null);
-        endTime = DateTime.ParseExact(eventSettings.EventEndDateTime, "yyyyMMddHHmmss", null);
+        //currentTime = DateTime.ParseExact(eventSettings.EventStartDateTime, "yyyyMMddHHmmss", null);
+        //endTime = DateTime.ParseExact(eventSettings.EventEndDateTime, "yyyyMMddHHmmss", null);
 
         dataLoader.LoadAndOrganizeEvents();
         pendingVisitors.AddRange(dataLoader.visitors);
         pendingVisitors.Sort((a, b) => a.events[0].timestamp.CompareTo(b.events[0].timestamp));
 
-        StartCoroutine(SimulateTime());
+       // StartCoroutine(SimulateTime());
     }
 
-    IEnumerator SimulateTime()
-    {
-        while (currentTime <= endTime)
-        {
-            while (pendingVisitors.Count > 0 && currentTime.ToString("yyyyMMddHHmmss").CompareTo(pendingVisitors[0].events[0].timestamp) >= 0)
-            {
-                SpawnVisitor(pendingVisitors[0]);
-                pendingVisitors.RemoveAt(0);
-            }
-            currentTime = currentTime.AddSeconds(Time.deltaTime * EventSettings.speed);
-            //debug.Log(currentTime);
-            DataTimeHUD.text = "DateTime: " + currentTime;
-            VisitorsHUD.text = "Current Visitors: " + CurrentVisitors.Count;
-
-            yield return null;
-        }
-    }
 
     /**
     public void AddBackVisitorToPending(AbstractVisitor visitorData)
@@ -62,10 +45,10 @@ public class VisitorSpawner : MonoBehaviour
     void SpawnVisitor(AbstractVisitor visitorData)
     {
         GameObject visitorInstance = Instantiate(visitorPrefab, spawnLocation.transform.position, spawnLocation.transform.rotation);
-        Visitor visitorScript = visitorInstance.GetComponent<Visitor>();
-        visitorScript.visitorData = visitorData;
+        NeedsBasedVisitor visitorScript = visitorInstance.GetComponent<NeedsBasedVisitor>();
+        //visitorScript.visitorData = visitorData;
         visitorScript.points = points;
-        visitorScript.visitorSpawner = this;
+        //visitorScript.visitorSpawner = this;
         CurrentVisitors.Add(visitorInstance);
         //Debug.Log($"Spawned visitor {visitorData.userId} at {currentTime}");
     }

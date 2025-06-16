@@ -22,7 +22,7 @@ public class Visitor : MonoBehaviour
     public float baseSpeed = 3.5f;
     public float baseAcceleration = 200f;
     public float baseAngularSpeed = 120f;
-    public float baseStoppingDistance = 0.5f;
+    public float baseStoppingDistance = 1f;
     public GameObject tag;
 
     private NavMeshAgent navAgent;

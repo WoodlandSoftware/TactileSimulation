@@ -8,6 +8,9 @@ TagManager:
   - Tactile
   - Token
   - SecondCamera
+  - FoodStand
+  - DrinkStand
+  - CoinStand
   layers:
   - Default
   - TransparentFX

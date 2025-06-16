@@ -4,9 +4,10 @@ public class ExitCollidor : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
+        /**
         if (other.gameObject.tag == "Visitor")
         {
-            Visitor v = other.GetComponent<Visitor>();
+            NeedsBasedVisitor v = other.GetComponent<NeedsBasedVisitor>();
             if (v.visitorData.events.Count == 0) 
             {
                 v.visitorSpawner.CurrentVisitors.Remove(v.gameObject);
@@ -39,5 +40,6 @@ public class ExitCollidor : MonoBehaviour
             }
         }
         else Debug.Log("Different Tag");
+        /**/
     }
 }

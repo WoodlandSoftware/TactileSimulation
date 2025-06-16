@@ -21,7 +21,7 @@ public class DataLoader : MonoBehaviour
         string transactionsFilePath = Path.Combine(Application.streamingAssetsPath, TransactionsFileName + ".json");
         string merchantNamesOutputPath = Path.Combine(Application.streamingAssetsPath, "merchant-names.txt");
 
-        WriteMerchantNamesToFile(transactionsFilePath, merchantNamesOutputPath);
+        //WriteMerchantNamesToFile(transactionsFilePath, merchantNamesOutputPath);
     }
 
     public void LoadAndOrganizeEvents()
@@ -74,6 +74,7 @@ public class DataLoader : MonoBehaviour
         return dateTimeOffset.ToString("yyyyMMddHHmmss");
     }
 
+    /**/
     public void WriteMerchantNamesToFile(string transactionsFilePath, string outputTxtFilePath)
     {
         string transactionsJson = File.ReadAllText(transactionsFilePath);
@@ -88,6 +89,6 @@ public class DataLoader : MonoBehaviour
         File.WriteAllLines(outputTxtFilePath, merchantNames);
         Debug.Log($"Merchant names written to {outputTxtFilePath}");
     }
-
+    /**/
     // private Dictionary<string, AbstractVisitor> visitorDict = new();
 }

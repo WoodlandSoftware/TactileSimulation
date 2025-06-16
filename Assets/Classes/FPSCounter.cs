@@ -9,6 +9,12 @@ public class FPSCounter : MonoBehaviour
     private float elapsedTime = 0.0f;
     private float updateInterval = 1.0f; // Update FPS display every 1 second
 
+    //public bool ToggleFPS;
+    private void Start()
+    {
+        ToggleCounter();
+    }
+
     void Update()
     {
         frameCount++;
@@ -17,11 +23,18 @@ public class FPSCounter : MonoBehaviour
         if (elapsedTime >= updateInterval)
         {
             float fps = frameCount / elapsedTime;
-            fpsText.text = "FPS: " + Mathf.RoundToInt(fps);
+            fpsText.text = Mathf.RoundToInt(fps).ToString();
 
-            // Reset counters
+            //Reset counters
             frameCount = 0;
             elapsedTime = 0;
         }
+        if (Input.GetKeyDown(KeyCode.F)) ToggleCounter();
+    }
+
+    void ToggleCounter()
+    {
+        if (fpsText.enabled) fpsText.enabled = false;
+        else fpsText.enabled = true;
     }
 }
